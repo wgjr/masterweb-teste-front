@@ -1,0 +1,129 @@
+@import '../quasar-variables.sass'
+@import '~quasar-styl'
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Poppins:wght@300;400;500;600&display=swap")
+*
+  font-family: "Poppins", sans-serif
+
+.wrapper
+  margin: 0 auto
+  max-width: 1440px
+
+.body--light
+  .bg-transparent
+    background-color: #0000001a
+    -webkit-backdrop-filter: blur( 7px )
+    backdrop-filter: blur( 7px )
+
+.q-field__control,
+.q-field__append,
+.q-field__marginal
+  height: 48px
+
+.q-field--auto-height .q-field__control,
+.q-field--auto-height .q-field__native
+  min-height: 48px
+
+.q-field__label
+  font-size: 14px
+  line-height: 12px
+
+.q-field__bottom
+  padding: 4px 4px 0
+
+.q-checkbox__bg
+  border-radius: 4px
+
+// custom table
+.q-table th
+  font-weight: 700
+  font-size: 13px
+
+.q-stepper__dot
+  background-color: transparent
+  .q-icon
+    color: $grey-6
+    font-size: 1.8rem
+
+.q-stepper__tab--active
+  .q-stepper__dot
+    .q-icon
+      color: $primary
+
+.q-stepper__tab--done
+  .q-stepper__dot
+    .q-icon
+      color: $primary
+
+.q-stepper--horizontal > .q-stepper__nav
+  padding: 24px
+
+.body--dark
+  .sticky-header-column-table
+    thead tr:last-child th:last-child
+      background-color: $grey-9
+      border-left: 1px solid $grey-8
+    td:last-child
+      background-color: $grey-9
+      border-left: 1px solid $grey-8
+
+.sticky-header-column-table
+  thead tr:last-child th:last-child
+    background-color: $grey-1
+    border-left: 1px solid rgba(0, 0, 0, 0.12)
+  td:last-child
+    background-color: $grey-1
+    border-left: 1px solid rgba(0, 0, 0, 0.12)
+  th:last-child,
+  td:last-child
+    position: sticky
+    right: 0
+    z-index: 1
+
+.product-card
+  transition: all .5s
+  .hover-button
+    display: none
+
+  &:hover
+    transform: scale(1.03)
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2)
+    cursor: pointer
+    border-color: $primary
+    .hover-button
+      display: block
+
+.product-delete
+  background: $grey-2
+  .q-img__image
+    filter: grayscale(100%) !important
+
+.tab-table
+  .q-tab
+    padding: 0 16px
+    border-radius: 8px 8px 0 0
+    margin-right: 5px
+
+  .q-tab--active
+    border-bottom: 0 !important
+
+  .q-tab__indicator
+    display: none
+    margin-top: -2px
+
+.body--light
+  .tab-table
+    .q-tab--active
+      border: 1px solid rgba(0, 0, 0, 0.12)
+      background: white
+    .q-tab--inactive
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12)
+      background: $grey-3
+
+.body--dark
+  .tab-table
+    .q-tab--active
+      border: 1px solid rgba(255, 255, 255, 0.28)
+      background: $grey-10
+    .q-tab--inactive
+      border-bottom: 1px solid rgba(255, 255, 255, 0.28)
+      background: $grey-9
